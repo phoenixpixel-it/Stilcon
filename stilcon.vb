@@ -100,7 +100,6 @@ Public Class stilcon
         End If
     End Sub
 
-
     Private Sub st_mn_panel_chiudi_Click(sender As Object, e As EventArgs) Handles st_mn_panel_chiudi.Click
         'st_mn_panel_chiudi.Click
         If st_gb_ai_tb.Value = 1 Then
