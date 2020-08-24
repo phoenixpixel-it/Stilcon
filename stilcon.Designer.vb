@@ -40,6 +40,8 @@ Partial Class stilcon
         Me.ofd = New System.Windows.Forms.OpenFileDialog()
         Me.sfd = New System.Windows.Forms.SaveFileDialog()
         Me.st_ref_panel = New System.Windows.Forms.Panel()
+        Me.st_ref_icon_panel = New System.Windows.Forms.Panel()
+        Me.st_ref_icon = New System.Windows.Forms.PictureBox()
         Me.st_ref_panel_label = New System.Windows.Forms.Label()
         Me.st_ref_panel_link = New System.Windows.Forms.LinkLabel()
         Me.st_mn_panel_chiudi = New System.Windows.Forms.Button()
@@ -50,6 +52,8 @@ Partial Class stilcon
         CType(Me.st_gb_ai_icon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.st_gb_ii.SuspendLayout()
         Me.st_ref_panel.SuspendLayout()
+        Me.st_ref_icon_panel.SuspendLayout()
+        CType(Me.st_ref_icon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.st_mn.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,7 +64,7 @@ Partial Class stilcon
         Me.st_gb.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.st_gb.Location = New System.Drawing.Point(13, 56)
         Me.st_gb.Name = "st_gb"
-        Me.st_gb.Size = New System.Drawing.Size(636, 260)
+        Me.st_gb.Size = New System.Drawing.Size(657, 260)
         Me.st_gb.TabIndex = 0
         Me.st_gb.TabStop = False
         Me.st_gb.Text = "Stilcon"
@@ -69,28 +73,29 @@ Partial Class stilcon
         '
         Me.st_gb_ai.Controls.Add(Me.st_gb_ai_tb)
         Me.st_gb_ai.Controls.Add(Me.st_gb_ai_icon)
-        Me.st_gb_ai.Location = New System.Drawing.Point(7, 26)
+        Me.st_gb_ai.Location = New System.Drawing.Point(10, 26)
         Me.st_gb_ai.Name = "st_gb_ai"
-        Me.st_gb_ai.Size = New System.Drawing.Size(165, 225)
+        Me.st_gb_ai.Size = New System.Drawing.Size(180, 225)
         Me.st_gb_ai.TabIndex = 2
         Me.st_gb_ai.TabStop = False
         Me.st_gb_ai.Text = "Anteprima icona"
         '
         'st_gb_ai_tb
         '
-        Me.st_gb_ai_tb.Location = New System.Drawing.Point(7, 26)
+        Me.st_gb_ai_tb.Location = New System.Drawing.Point(8, 26)
         Me.st_gb_ai_tb.Maximum = 2
         Me.st_gb_ai_tb.Minimum = 1
         Me.st_gb_ai_tb.Name = "st_gb_ai_tb"
-        Me.st_gb_ai_tb.Size = New System.Drawing.Size(150, 56)
+        Me.st_gb_ai_tb.Size = New System.Drawing.Size(165, 56)
         Me.st_gb_ai_tb.TabIndex = 8
         Me.st_gb_ai_tb.Value = 1
         '
         'st_gb_ai_icon
         '
-        Me.st_gb_ai_icon.Location = New System.Drawing.Point(7, 88)
+        Me.st_gb_ai_icon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.st_gb_ai_icon.Location = New System.Drawing.Point(8, 88)
         Me.st_gb_ai_icon.Name = "st_gb_ai_icon"
-        Me.st_gb_ai_icon.Size = New System.Drawing.Size(150, 125)
+        Me.st_gb_ai_icon.Size = New System.Drawing.Size(165, 125)
         Me.st_gb_ai_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.st_gb_ai_icon.TabIndex = 0
         Me.st_gb_ai_icon.TabStop = False
@@ -104,7 +109,7 @@ Partial Class stilcon
         Me.st_gb_ii.Controls.Add(Me.st_gb_ii_resolution_label)
         Me.st_gb_ii.Controls.Add(Me.st_gb_ii_name_label)
         Me.st_gb_ii.Controls.Add(Me.st_gb_ii_size_label)
-        Me.st_gb_ii.Location = New System.Drawing.Point(178, 26)
+        Me.st_gb_ii.Location = New System.Drawing.Point(196, 26)
         Me.st_gb_ii.Name = "st_gb_ii"
         Me.st_gb_ii.Size = New System.Drawing.Size(450, 225)
         Me.st_gb_ii.TabIndex = 1
@@ -190,7 +195,7 @@ Partial Class stilcon
         Me.st_mn_panel_ruba.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.st_mn_panel_ruba.Location = New System.Drawing.Point(225, 10)
         Me.st_mn_panel_ruba.Name = "st_mn_panel_ruba"
-        Me.st_mn_panel_ruba.Size = New System.Drawing.Size(425, 30)
+        Me.st_mn_panel_ruba.Size = New System.Drawing.Size(445, 30)
         Me.st_mn_panel_ruba.TabIndex = 2
         Me.st_mn_panel_ruba.Text = "Ruba"
         Me.st_mn_panel_ruba.UseVisualStyleBackColor = True
@@ -203,21 +208,46 @@ Partial Class stilcon
         '
         'sfd
         '
-        Me.sfd.DefaultExt = "File BUTMAP|*.bmp;*.dib"
-        Me.sfd.Filter = "File PNG|*.png|File BITMAP|*.bmp;*.dib|File JPEG|*.jpg;*.jpeg;*.jpe;*.jif;*.jfif;" &
-    "*.jfi|File ICO|*.ico|File CUR|*.cur|Tutti i file|*.*"
+        Me.sfd.DefaultExt = "File BITMAP|*.bmp;*.dib"
+        Me.sfd.Filter = "File BITMAP|*.bmp;*.dib|File PNG|*.png|File JPEG|*.jpg;*.jpeg;*.jpe;*.jif;*.jfif;" &
+    "*.jfi|File ICO|*.ico|File CUR|*.cur"
         Me.sfd.Title = "Ruba"
         '
         'st_ref_panel
         '
         Me.st_ref_panel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.st_ref_panel.Controls.Add(Me.st_ref_icon_panel)
         Me.st_ref_panel.Controls.Add(Me.st_ref_panel_label)
         Me.st_ref_panel.Controls.Add(Me.st_ref_panel_link)
         Me.st_ref_panel.Dock = System.Windows.Forms.DockStyle.Top
         Me.st_ref_panel.Location = New System.Drawing.Point(0, 0)
         Me.st_ref_panel.Name = "st_ref_panel"
-        Me.st_ref_panel.Size = New System.Drawing.Size(662, 50)
+        Me.st_ref_panel.Size = New System.Drawing.Size(682, 50)
         Me.st_ref_panel.TabIndex = 3
+        '
+        'st_ref_icon_panel
+        '
+        Me.st_ref_icon_panel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.st_ref_icon_panel.Controls.Add(Me.st_ref_icon)
+        Me.st_ref_icon_panel.Dock = System.Windows.Forms.DockStyle.Right
+        Me.st_ref_icon_panel.Location = New System.Drawing.Point(606, 0)
+        Me.st_ref_icon_panel.Name = "st_ref_icon_panel"
+        Me.st_ref_icon_panel.Size = New System.Drawing.Size(76, 50)
+        Me.st_ref_icon_panel.TabIndex = 2
+        '
+        'st_ref_icon
+        '
+        Me.st_ref_icon.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.st_ref_icon.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.st_ref_icon.Image = Global.Stilcon.My.Resources.Resources.stilcon
+        Me.st_ref_icon.Location = New System.Drawing.Point(3, 3)
+        Me.st_ref_icon.Name = "st_ref_icon"
+        Me.st_ref_icon.Size = New System.Drawing.Size(70, 45)
+        Me.st_ref_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.st_ref_icon.TabIndex = 2
+        Me.st_ref_icon.TabStop = False
         '
         'st_ref_panel_label
         '
@@ -257,9 +287,9 @@ Partial Class stilcon
         Me.st_mn.Controls.Add(Me.st_mn_panel_chiudi)
         Me.st_mn.Controls.Add(Me.st_mn_panel_ruba)
         Me.st_mn.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.st_mn.Location = New System.Drawing.Point(0, 335)
+        Me.st_mn.Location = New System.Drawing.Point(0, 333)
         Me.st_mn.Name = "st_mn"
-        Me.st_mn.Size = New System.Drawing.Size(662, 50)
+        Me.st_mn.Size = New System.Drawing.Size(682, 50)
         Me.st_mn.TabIndex = 5
         '
         'stilcon
@@ -267,7 +297,7 @@ Partial Class stilcon
         Me.AcceptButton = Me.st_mn_panel_apri
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(662, 385)
+        Me.ClientSize = New System.Drawing.Size(682, 383)
         Me.Controls.Add(Me.st_mn)
         Me.Controls.Add(Me.st_ref_panel)
         Me.Controls.Add(Me.st_gb)
@@ -276,7 +306,7 @@ Partial Class stilcon
         Me.MaximizeBox = False
         Me.Name = "stilcon"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Stilicon 1.1"
+        Me.Text = "Stilicon 1.1.0.1"
         Me.st_gb.ResumeLayout(False)
         Me.st_gb_ai.ResumeLayout(False)
         Me.st_gb_ai.PerformLayout()
@@ -286,6 +316,8 @@ Partial Class stilcon
         Me.st_gb_ii.PerformLayout()
         Me.st_ref_panel.ResumeLayout(False)
         Me.st_ref_panel.PerformLayout()
+        Me.st_ref_icon_panel.ResumeLayout(False)
+        CType(Me.st_ref_icon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.st_mn.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -312,4 +344,6 @@ Partial Class stilcon
     Friend WithEvents st_gb_ii_size_w_label As Label
     Friend WithEvents st_gb_ii_resolution_h_label As Label
     Friend WithEvents st_gb_ii_resolution_w_label As Label
+    Friend WithEvents st_ref_icon As PictureBox
+    Friend WithEvents st_ref_icon_panel As Panel
 End Class
