@@ -210,7 +210,7 @@ Partial Class stilcon
         '
         Me.sfd.DefaultExt = "File BITMAP|*.bmp;*.dib"
         Me.sfd.Filter = "File BITMAP|*.bmp;*.dib|File PNG|*.png|File JPEG|*.jpg;*.jpeg;*.jpe;*.jif;*.jfif;" &
-    "*.jfi|File ICO|*.ico|File CUR|*.cur"
+    "*.jfi|File CUR|*.cur"
         Me.sfd.Title = "Ruba"
         '
         'st_ref_panel
@@ -306,7 +306,7 @@ Partial Class stilcon
         Me.MaximizeBox = False
         Me.Name = "stilcon"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Stilicon 1.1.0.1"
+        Me.Text = "Stilicon 1.1.0.2"
         Me.st_gb.ResumeLayout(False)
         Me.st_gb_ai.ResumeLayout(False)
         Me.st_gb_ai.PerformLayout()
