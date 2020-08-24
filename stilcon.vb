@@ -103,8 +103,17 @@ Public Class stilcon
 
     Private Sub st_mn_panel_chiudi_Click(sender As Object, e As EventArgs) Handles st_mn_panel_chiudi.Click
         'st_mn_panel_chiudi.Click
+        If st_gb_ai_tb.Value = 1 Then
+            'true
+            Me.Text = My.Application.Info.AssemblyName & " - *** Nessuna icona caricata *** [Centrata]"
+            st_gb_ai_icon.SizeMode = PictureBoxSizeMode.CenterImage
+        Else
+            'false
+            Me.Text = My.Application.Info.AssemblyName & " - *** Nessuna icona caricata *** [Ingradita]"
+            st_gb_ai_icon.SizeMode = PictureBoxSizeMode.Zoom
+        End If
+
         defaultload = 3
-        Me.Text = My.Application.Info.AssemblyName
         st_gb_ai_icon.Image = Nothing
 
         st_gb_ii_name_label.Text = "Nome origine icona: " & "n/A"
