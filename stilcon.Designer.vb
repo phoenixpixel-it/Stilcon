@@ -44,7 +44,6 @@ Partial Class stilcon
         Me.st_ref_panel_link = New System.Windows.Forms.LinkLabel()
         Me.st_mn_panel_chiudi = New System.Windows.Forms.Button()
         Me.st_mn = New System.Windows.Forms.Panel()
-        Me.st_ref_panel_version = New System.Windows.Forms.Label()
         Me.st_gb.SuspendLayout()
         Me.st_gb_ai.SuspendLayout()
         CType(Me.st_gb_ai_tb, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,7 +211,6 @@ Partial Class stilcon
         'st_ref_panel
         '
         Me.st_ref_panel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.st_ref_panel.Controls.Add(Me.st_ref_panel_version)
         Me.st_ref_panel.Controls.Add(Me.st_ref_panel_label)
         Me.st_ref_panel.Controls.Add(Me.st_ref_panel_link)
         Me.st_ref_panel.Dock = System.Windows.Forms.DockStyle.Top
@@ -264,16 +262,6 @@ Partial Class stilcon
         Me.st_mn.Size = New System.Drawing.Size(662, 50)
         Me.st_mn.TabIndex = 5
         '
-        'st_ref_panel_version
-        '
-        Me.st_ref_panel_version.AutoSize = True
-        Me.st_ref_panel_version.Font = New System.Drawing.Font("Segoe UI", 10.2!)
-        Me.st_ref_panel_version.Location = New System.Drawing.Point(517, 14)
-        Me.st_ref_panel_version.Name = "st_ref_panel_version"
-        Me.st_ref_panel_version.Size = New System.Drawing.Size(132, 23)
-        Me.st_ref_panel_version.TabIndex = 2
-        Me.st_ref_panel_version.Text = "Versione: 1.1.0.0"
-        '
         'stilcon
         '
         Me.AcceptButton = Me.st_mn_panel_apri
@@ -324,5 +312,4 @@ Partial Class stilcon
     Friend WithEvents st_gb_ii_size_w_label As Label
     Friend WithEvents st_gb_ii_resolution_h_label As Label
     Friend WithEvents st_gb_ii_resolution_w_label As Label
-    Friend WithEvents st_ref_panel_version As Label
 End Class
