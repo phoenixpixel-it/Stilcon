@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Controllare i valori degli attributi degli assembly
 
 <Assembly: AssemblyTitle("Stilcon")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("HP Inc.")>
+<Assembly: AssemblyDescription("Stilcon")>
+<Assembly: AssemblyCompany("Phoenix Pixel Studio")>
 <Assembly: AssemblyProduct("Stilcon")>
-<Assembly: AssemblyCopyright("Copyright © HP Inc. 2020")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyCopyright("Copyright © Phoenix Pixel Studio 2020")>
+<Assembly: AssemblyTrademark("Phoenix Pixel Studio")>
 
 <Assembly: ComVisible(False)>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' usando l'asterisco '*' come illustrato di seguito:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.1.0.0")>
+<Assembly: AssemblyFileVersion("1.1.0.0")>
