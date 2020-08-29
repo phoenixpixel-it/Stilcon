@@ -1,7 +1,8 @@
 # Stilcon
 Stilicon è un tool che premette di "prendere in prestito" icone di file e programmi.
 
-Ultima versione -> [Qui](https://github.com/phoenixpixel-it/Stilcon/releases)
+Versioni stabili: [Qui](https://github.com/phoenixpixel-it/Stilcon/releases)
+Phoenix Pixel: [Qui](https://github.com/phoenixpixel-it)
 
 # Dettagli Stilcon 1.1.0.3
 - Architettura: **x86**
