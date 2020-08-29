@@ -100,6 +100,7 @@ Public Class stilcon
         End If
     End Sub
 
+
     Private Sub st_mn_panel_chiudi_Click(sender As Object, e As EventArgs) Handles st_mn_panel_chiudi.Click
         'st_mn_panel_chiudi.Click
         If st_gb_ai_tb.Value = 1 Then
@@ -140,9 +141,14 @@ Public Class stilcon
         End If
     End Sub
 
-    Private Sub st_ref_panel_link_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles st_ref_panel_link.LinkClicked
-        'st_ref_panel_link.LinkClicked
+    Private Sub st_ref_panel_link1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles st_ref_panel_link1.LinkClicked
+        'st_ref_panel_link1.LinkClicked
         Process.Start("https://phoenixpixel.it/")
+    End Sub
+
+    Private Sub st_ref_panel_link2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles st_ref_panel_link2.LinkClicked
+        'st_ref_panel_link2.LinkClicked
+        Process.Start("https://github.com/phoenixpixel-it/Stilcon")
     End Sub
 
     Private Sub st_gb_ai_tb_Scroll(sender As Object, e As EventArgs) Handles st_gb_ai_tb.Scroll

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>Stilcon.My.MyApplication</StartupObject>
     <RootNamespace>Stilcon</RootNamespace>
-    <AssemblyName>Stilcon 1.1.0.2</AssemblyName>
+    <AssemblyName>Stilcon 1.1.0.3</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Stilcon 1.1.0.2.xml</DocumentationFile>
+    <DocumentationFile>Stilcon 1.1.0.3.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Stilcon 1.1.0.2.xml</DocumentationFile>
+    <DocumentationFile>Stilcon 1.1.0.3.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -100,6 +100,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="stilconl.Designer.vb">
+      <DependentUpon>stilconl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stilconl.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="stilcon.resx">
@@ -110,6 +116,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stilconl.resx">
+      <DependentUpon>stilconl.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

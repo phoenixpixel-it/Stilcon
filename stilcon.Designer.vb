@@ -28,6 +28,7 @@ Partial Class stilcon
         Me.st_gb_ai_tb = New System.Windows.Forms.TrackBar()
         Me.st_gb_ai_icon = New System.Windows.Forms.PictureBox()
         Me.st_gb_ii = New System.Windows.Forms.GroupBox()
+        Me.st_gb_ii_formato = New System.Windows.Forms.Label()
         Me.st_gb_ii_resolution_h_label = New System.Windows.Forms.Label()
         Me.st_gb_ii_resolution_w_label = New System.Windows.Forms.Label()
         Me.st_gb_ii_size_h_label = New System.Windows.Forms.Label()
@@ -40,10 +41,12 @@ Partial Class stilcon
         Me.ofd = New System.Windows.Forms.OpenFileDialog()
         Me.sfd = New System.Windows.Forms.SaveFileDialog()
         Me.st_ref_panel = New System.Windows.Forms.Panel()
+        Me.st_ref_panel_link2 = New System.Windows.Forms.LinkLabel()
+        Me.st_ref_panel_label2 = New System.Windows.Forms.Label()
         Me.st_ref_icon_panel = New System.Windows.Forms.Panel()
         Me.st_ref_icon = New System.Windows.Forms.PictureBox()
-        Me.st_ref_panel_label = New System.Windows.Forms.Label()
-        Me.st_ref_panel_link = New System.Windows.Forms.LinkLabel()
+        Me.st_ref_panel_label1 = New System.Windows.Forms.Label()
+        Me.st_ref_panel_link1 = New System.Windows.Forms.LinkLabel()
         Me.st_mn_panel_chiudi = New System.Windows.Forms.Button()
         Me.st_mn = New System.Windows.Forms.Panel()
         Me.st_gb.SuspendLayout()
@@ -102,6 +105,7 @@ Partial Class stilcon
         '
         'st_gb_ii
         '
+        Me.st_gb_ii.Controls.Add(Me.st_gb_ii_formato)
         Me.st_gb_ii.Controls.Add(Me.st_gb_ii_resolution_h_label)
         Me.st_gb_ii.Controls.Add(Me.st_gb_ii_resolution_w_label)
         Me.st_gb_ii.Controls.Add(Me.st_gb_ii_size_h_label)
@@ -116,50 +120,59 @@ Partial Class stilcon
         Me.st_gb_ii.TabStop = False
         Me.st_gb_ii.Text = "Informazioni icona"
         '
+        'st_gb_ii_formato
+        '
+        Me.st_gb_ii_formato.AutoSize = True
+        Me.st_gb_ii_formato.Location = New System.Drawing.Point(6, 162)
+        Me.st_gb_ii_formato.Name = "st_gb_ii_formato"
+        Me.st_gb_ii_formato.Size = New System.Drawing.Size(120, 20)
+        Me.st_gb_ii_formato.TabIndex = 12
+        Me.st_gb_ii_formato.Text = "Formato: bitmap"
+        '
         'st_gb_ii_resolution_h_label
         '
         Me.st_gb_ii_resolution_h_label.AutoSize = True
         Me.st_gb_ii_resolution_h_label.Location = New System.Drawing.Point(45, 142)
         Me.st_gb_ii_resolution_h_label.Name = "st_gb_ii_resolution_h_label"
-        Me.st_gb_ii_resolution_h_label.Size = New System.Drawing.Size(89, 20)
+        Me.st_gb_ii_resolution_h_label.Size = New System.Drawing.Size(129, 20)
         Me.st_gb_ii_resolution_h_label.TabIndex = 11
-        Me.st_gb_ii_resolution_h_label.Text = "Altezza: n/A"
+        Me.st_gb_ii_resolution_h_label.Text = "Altezza icona: n/A"
         '
         'st_gb_ii_resolution_w_label
         '
         Me.st_gb_ii_resolution_w_label.AutoSize = True
         Me.st_gb_ii_resolution_w_label.Location = New System.Drawing.Point(45, 122)
         Me.st_gb_ii_resolution_w_label.Name = "st_gb_ii_resolution_w_label"
-        Me.st_gb_ii_resolution_w_label.Size = New System.Drawing.Size(110, 20)
+        Me.st_gb_ii_resolution_w_label.Size = New System.Drawing.Size(150, 20)
         Me.st_gb_ii_resolution_w_label.TabIndex = 10
-        Me.st_gb_ii_resolution_w_label.Text = "Lunghezza: n/A"
+        Me.st_gb_ii_resolution_w_label.Text = "Lunghezza icona: n/A"
         '
         'st_gb_ii_size_h_label
         '
         Me.st_gb_ii_size_h_label.AutoSize = True
         Me.st_gb_ii_size_h_label.Location = New System.Drawing.Point(45, 82)
         Me.st_gb_ii_size_h_label.Name = "st_gb_ii_size_h_label"
-        Me.st_gb_ii_size_h_label.Size = New System.Drawing.Size(89, 20)
+        Me.st_gb_ii_size_h_label.Size = New System.Drawing.Size(129, 20)
         Me.st_gb_ii_size_h_label.TabIndex = 9
-        Me.st_gb_ii_size_h_label.Text = "Altezza: n/A"
+        Me.st_gb_ii_size_h_label.Text = "Altezza icona: n/A"
         '
         'st_gb_ii_size_w_label
         '
         Me.st_gb_ii_size_w_label.AutoSize = True
         Me.st_gb_ii_size_w_label.Location = New System.Drawing.Point(45, 63)
         Me.st_gb_ii_size_w_label.Name = "st_gb_ii_size_w_label"
-        Me.st_gb_ii_size_w_label.Size = New System.Drawing.Size(110, 20)
+        Me.st_gb_ii_size_w_label.Size = New System.Drawing.Size(150, 20)
         Me.st_gb_ii_size_w_label.TabIndex = 8
-        Me.st_gb_ii_size_w_label.Text = "Lunghezza: n/A"
+        Me.st_gb_ii_size_w_label.Text = "Lunghezza icona: n/A"
         '
         'st_gb_ii_resolution_label
         '
         Me.st_gb_ii_resolution_label.AutoSize = True
         Me.st_gb_ii_resolution_label.Location = New System.Drawing.Point(6, 102)
         Me.st_gb_ii_resolution_label.Name = "st_gb_ii_resolution_label"
-        Me.st_gb_ii_resolution_label.Size = New System.Drawing.Size(116, 20)
+        Me.st_gb_ii_resolution_label.Size = New System.Drawing.Size(156, 20)
         Me.st_gb_ii_resolution_label.TabIndex = 4
-        Me.st_gb_ii_resolution_label.Text = "Risoluzione: n/A"
+        Me.st_gb_ii_resolution_label.Text = "Risoluzione icona: n/A"
         '
         'st_gb_ii_name_label
         '
@@ -175,9 +188,9 @@ Partial Class stilcon
         Me.st_gb_ii_size_label.AutoSize = True
         Me.st_gb_ii_size_label.Location = New System.Drawing.Point(6, 43)
         Me.st_gb_ii_size_label.Name = "st_gb_ii_size_label"
-        Me.st_gb_ii_size_label.Size = New System.Drawing.Size(115, 20)
+        Me.st_gb_ii_size_label.Size = New System.Drawing.Size(155, 20)
         Me.st_gb_ii_size_label.TabIndex = 3
-        Me.st_gb_ii_size_label.Text = "Dimensioni: n/A"
+        Me.st_gb_ii_size_label.Text = "Dimensioni icona: n/A"
         '
         'st_mn_panel_apri
         '
@@ -216,14 +229,37 @@ Partial Class stilcon
         'st_ref_panel
         '
         Me.st_ref_panel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.st_ref_panel.Controls.Add(Me.st_ref_panel_link2)
+        Me.st_ref_panel.Controls.Add(Me.st_ref_panel_label2)
         Me.st_ref_panel.Controls.Add(Me.st_ref_icon_panel)
-        Me.st_ref_panel.Controls.Add(Me.st_ref_panel_label)
-        Me.st_ref_panel.Controls.Add(Me.st_ref_panel_link)
+        Me.st_ref_panel.Controls.Add(Me.st_ref_panel_label1)
+        Me.st_ref_panel.Controls.Add(Me.st_ref_panel_link1)
         Me.st_ref_panel.Dock = System.Windows.Forms.DockStyle.Top
         Me.st_ref_panel.Location = New System.Drawing.Point(0, 0)
         Me.st_ref_panel.Name = "st_ref_panel"
         Me.st_ref_panel.Size = New System.Drawing.Size(682, 50)
         Me.st_ref_panel.TabIndex = 3
+        '
+        'st_ref_panel_link2
+        '
+        Me.st_ref_panel_link2.AutoSize = True
+        Me.st_ref_panel_link2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.st_ref_panel_link2.Location = New System.Drawing.Point(242, 14)
+        Me.st_ref_panel_link2.Name = "st_ref_panel_link2"
+        Me.st_ref_panel_link2.Size = New System.Drawing.Size(134, 23)
+        Me.st_ref_panel_link2.TabIndex = 4
+        Me.st_ref_panel_link2.TabStop = True
+        Me.st_ref_panel_link2.Text = "Codice sorgente"
+        '
+        'st_ref_panel_label2
+        '
+        Me.st_ref_panel_label2.AutoSize = True
+        Me.st_ref_panel_label2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.st_ref_panel_label2.Location = New System.Drawing.Point(219, 14)
+        Me.st_ref_panel_label2.Name = "st_ref_panel_label2"
+        Me.st_ref_panel_label2.Size = New System.Drawing.Size(17, 23)
+        Me.st_ref_panel_label2.TabIndex = 3
+        Me.st_ref_panel_label2.Text = "-"
         '
         'st_ref_icon_panel
         '
@@ -249,26 +285,26 @@ Partial Class stilcon
         Me.st_ref_icon.TabIndex = 2
         Me.st_ref_icon.TabStop = False
         '
-        'st_ref_panel_label
+        'st_ref_panel_label1
         '
-        Me.st_ref_panel_label.AutoSize = True
-        Me.st_ref_panel_label.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.st_ref_panel_label.Location = New System.Drawing.Point(10, 14)
-        Me.st_ref_panel_label.Name = "st_ref_panel_label"
-        Me.st_ref_panel_label.Size = New System.Drawing.Size(89, 23)
-        Me.st_ref_panel_label.TabIndex = 1
-        Me.st_ref_panel_label.Text = "Creato da:"
+        Me.st_ref_panel_label1.AutoSize = True
+        Me.st_ref_panel_label1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.st_ref_panel_label1.Location = New System.Drawing.Point(10, 14)
+        Me.st_ref_panel_label1.Name = "st_ref_panel_label1"
+        Me.st_ref_panel_label1.Size = New System.Drawing.Size(89, 23)
+        Me.st_ref_panel_label1.TabIndex = 1
+        Me.st_ref_panel_label1.Text = "Creato da:"
         '
-        'st_ref_panel_link
+        'st_ref_panel_link1
         '
-        Me.st_ref_panel_link.AutoSize = True
-        Me.st_ref_panel_link.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.st_ref_panel_link.Location = New System.Drawing.Point(102, 14)
-        Me.st_ref_panel_link.Name = "st_ref_panel_link"
-        Me.st_ref_panel_link.Size = New System.Drawing.Size(111, 23)
-        Me.st_ref_panel_link.TabIndex = 0
-        Me.st_ref_panel_link.TabStop = True
-        Me.st_ref_panel_link.Text = "Phoenix Pixel"
+        Me.st_ref_panel_link1.AutoSize = True
+        Me.st_ref_panel_link1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.st_ref_panel_link1.Location = New System.Drawing.Point(102, 14)
+        Me.st_ref_panel_link1.Name = "st_ref_panel_link1"
+        Me.st_ref_panel_link1.Size = New System.Drawing.Size(111, 23)
+        Me.st_ref_panel_link1.TabIndex = 0
+        Me.st_ref_panel_link1.TabStop = True
+        Me.st_ref_panel_link1.Text = "Phoenix Pixel"
         '
         'st_mn_panel_chiudi
         '
@@ -287,7 +323,7 @@ Partial Class stilcon
         Me.st_mn.Controls.Add(Me.st_mn_panel_chiudi)
         Me.st_mn.Controls.Add(Me.st_mn_panel_ruba)
         Me.st_mn.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.st_mn.Location = New System.Drawing.Point(0, 333)
+        Me.st_mn.Location = New System.Drawing.Point(0, 323)
         Me.st_mn.Name = "st_mn"
         Me.st_mn.Size = New System.Drawing.Size(682, 50)
         Me.st_mn.TabIndex = 5
@@ -297,13 +333,15 @@ Partial Class stilcon
         Me.AcceptButton = Me.st_mn_panel_apri
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(682, 383)
+        Me.ClientSize = New System.Drawing.Size(682, 373)
         Me.Controls.Add(Me.st_mn)
         Me.Controls.Add(Me.st_ref_panel)
         Me.Controls.Add(Me.st_gb)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(700, 420)
+        Me.MinimumSize = New System.Drawing.Size(700, 420)
         Me.Name = "stilcon"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Stilicon 1.1.0.2"
@@ -335,8 +373,8 @@ Partial Class stilcon
     Friend WithEvents sfd As SaveFileDialog
     Friend WithEvents st_gb_ii_resolution_label As Label
     Friend WithEvents st_ref_panel As Panel
-    Friend WithEvents st_ref_panel_label As Label
-    Friend WithEvents st_ref_panel_link As LinkLabel
+    Friend WithEvents st_ref_panel_label1 As Label
+    Friend WithEvents st_ref_panel_link1 As LinkLabel
     Friend WithEvents st_mn_panel_chiudi As Button
     Friend WithEvents st_gb_ai_tb As TrackBar
     Friend WithEvents st_mn As Panel
@@ -346,4 +384,7 @@ Partial Class stilcon
     Friend WithEvents st_gb_ii_resolution_w_label As Label
     Friend WithEvents st_ref_icon As PictureBox
     Friend WithEvents st_ref_icon_panel As Panel
+    Friend WithEvents st_gb_ii_formato As Label
+    Friend WithEvents st_ref_panel_link2 As LinkLabel
+    Friend WithEvents st_ref_panel_label2 As Label
 End Class

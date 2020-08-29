@@ -3,10 +3,11 @@ C:\Users\lucap\source\repos\Stilcon\Stilcon\obj\Release\Stilcon.Resources.resour
 C:\Users\lucap\source\repos\Stilcon\Stilcon\obj\Release\Stilcon.vbproj.GenerateResource.cache
 C:\Users\lucap\source\repos\Stilcon\Stilcon\obj\Release\Stilcon.vbproj.CoreCompileInputs.cache
 C:\Users\lucap\source\repos\Stilcon\Stilcon\obj\Release\Stilcon.vbprojAssemblyReference.cache
-C:\Users\lucap\source\repos\Stilcon\Stilcon\bin\Release\Stilcon 1.1.0.1.exe.config
-C:\Users\lucap\source\repos\Stilcon\Stilcon\bin\Release\Stilcon 1.1.0.1.exe
-C:\Users\lucap\source\repos\Stilcon\Stilcon\bin\Release\Stilcon 1.1.0.1.pdb
-C:\Users\lucap\source\repos\Stilcon\Stilcon\bin\Release\Stilcon 1.1.0.1.xml
-C:\Users\lucap\source\repos\Stilcon\Stilcon\obj\Release\Stilcon 1.1.0.1.exe
-C:\Users\lucap\source\repos\Stilcon\Stilcon\obj\Release\Stilcon 1.1.0.1.xml
-C:\Users\lucap\source\repos\Stilcon\Stilcon\obj\Release\Stilcon 1.1.0.1.pdb
+C:\Users\lucap\source\repos\Stilcon\Stilcon\bin\Release\Stilcon 1.1.0.3.exe.config
+C:\Users\lucap\source\repos\Stilcon\Stilcon\bin\Release\Stilcon 1.1.0.3.exe
+C:\Users\lucap\source\repos\Stilcon\Stilcon\bin\Release\Stilcon 1.1.0.3.pdb
+C:\Users\lucap\source\repos\Stilcon\Stilcon\bin\Release\Stilcon 1.1.0.3.xml
+C:\Users\lucap\source\repos\Stilcon\Stilcon\obj\Release\Stilcon.stilconl.resources
+C:\Users\lucap\source\repos\Stilcon\Stilcon\obj\Release\Stilcon 1.1.0.3.exe
+C:\Users\lucap\source\repos\Stilcon\Stilcon\obj\Release\Stilcon 1.1.0.3.xml
+C:\Users\lucap\source\repos\Stilcon\Stilcon\obj\Release\Stilcon 1.1.0.3.pdb
