@@ -24,6 +24,7 @@ Partial Class stilconl
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(stilconl))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.version = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,12 +40,22 @@ Partial Class stilconl
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'version
+        '
+        Me.version.AutoSize = True
+        Me.version.Location = New System.Drawing.Point(12, 174)
+        Me.version.Name = "version"
+        Me.version.Size = New System.Drawing.Size(116, 17)
+        Me.version.TabIndex = 1
+        Me.version.Text = "Versione: 1.2.0.0"
+        '
         'stilconl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(400, 200)
+        Me.Controls.Add(Me.version)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -54,8 +65,10 @@ Partial Class stilconl
         Me.Text = "stilconl"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents version As Label
 End Class

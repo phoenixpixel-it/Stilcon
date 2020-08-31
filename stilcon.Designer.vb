@@ -24,6 +24,9 @@ Partial Class stilcon
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(stilcon))
         Me.st_gb = New System.Windows.Forms.GroupBox()
+        Me.st_gb_oz = New System.Windows.Forms.GroupBox()
+        Me.st_gb_oz_fl = New System.Windows.Forms.RadioButton()
+        Me.st_gb_oz_fw = New System.Windows.Forms.RadioButton()
         Me.st_gb_ai = New System.Windows.Forms.GroupBox()
         Me.st_gb_ai_tb = New System.Windows.Forms.TrackBar()
         Me.st_gb_ai_icon = New System.Windows.Forms.PictureBox()
@@ -41,15 +44,15 @@ Partial Class stilcon
         Me.ofd = New System.Windows.Forms.OpenFileDialog()
         Me.sfd = New System.Windows.Forms.SaveFileDialog()
         Me.st_ref_panel = New System.Windows.Forms.Panel()
-        Me.st_ref_panel_link2 = New System.Windows.Forms.LinkLabel()
-        Me.st_ref_panel_label2 = New System.Windows.Forms.Label()
         Me.st_ref_icon_panel = New System.Windows.Forms.Panel()
         Me.st_ref_icon = New System.Windows.Forms.PictureBox()
         Me.st_ref_panel_label1 = New System.Windows.Forms.Label()
         Me.st_ref_panel_link1 = New System.Windows.Forms.LinkLabel()
         Me.st_mn_panel_chiudi = New System.Windows.Forms.Button()
         Me.st_mn = New System.Windows.Forms.Panel()
+        Me.fbd = New System.Windows.Forms.FolderBrowserDialog()
         Me.st_gb.SuspendLayout()
+        Me.st_gb_oz.SuspendLayout()
         Me.st_gb_ai.SuspendLayout()
         CType(Me.st_gb_ai_tb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.st_gb_ai_icon, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,21 +65,55 @@ Partial Class stilcon
         '
         'st_gb
         '
+        Me.st_gb.Controls.Add(Me.st_gb_oz)
         Me.st_gb.Controls.Add(Me.st_gb_ai)
         Me.st_gb.Controls.Add(Me.st_gb_ii)
         Me.st_gb.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.st_gb.Location = New System.Drawing.Point(13, 56)
+        Me.st_gb.Location = New System.Drawing.Point(11, 56)
         Me.st_gb.Name = "st_gb"
-        Me.st_gb.Size = New System.Drawing.Size(657, 260)
+        Me.st_gb.Size = New System.Drawing.Size(660, 355)
         Me.st_gb.TabIndex = 0
         Me.st_gb.TabStop = False
         Me.st_gb.Text = "Stilcon"
+        '
+        'st_gb_oz
+        '
+        Me.st_gb_oz.Controls.Add(Me.st_gb_oz_fl)
+        Me.st_gb_oz.Controls.Add(Me.st_gb_oz_fw)
+        Me.st_gb_oz.Location = New System.Drawing.Point(10, 22)
+        Me.st_gb_oz.Name = "st_gb_oz"
+        Me.st_gb_oz.Size = New System.Drawing.Size(641, 90)
+        Me.st_gb_oz.TabIndex = 5
+        Me.st_gb_oz.TabStop = False
+        Me.st_gb_oz.Text = "Opzioni"
+        '
+        'st_gb_oz_fl
+        '
+        Me.st_gb_oz_fl.AutoSize = True
+        Me.st_gb_oz_fl.Checked = True
+        Me.st_gb_oz_fl.Location = New System.Drawing.Point(8, 26)
+        Me.st_gb_oz_fl.Name = "st_gb_oz_fl"
+        Me.st_gb_oz_fl.Size = New System.Drawing.Size(178, 24)
+        Me.st_gb_oz_fl.TabIndex = 3
+        Me.st_gb_oz_fl.TabStop = True
+        Me.st_gb_oz_fl.Text = """Ruba"" icona di un file"
+        Me.st_gb_oz_fl.UseVisualStyleBackColor = True
+        '
+        'st_gb_oz_fw
+        '
+        Me.st_gb_oz_fw.AutoSize = True
+        Me.st_gb_oz_fw.Location = New System.Drawing.Point(8, 56)
+        Me.st_gb_oz_fw.Name = "st_gb_oz_fw"
+        Me.st_gb_oz_fw.Size = New System.Drawing.Size(257, 24)
+        Me.st_gb_oz_fw.TabIndex = 4
+        Me.st_gb_oz_fw.Text = """Ruba"" icona di un sito web (Beta)"
+        Me.st_gb_oz_fw.UseVisualStyleBackColor = True
         '
         'st_gb_ai
         '
         Me.st_gb_ai.Controls.Add(Me.st_gb_ai_tb)
         Me.st_gb_ai.Controls.Add(Me.st_gb_ai_icon)
-        Me.st_gb_ai.Location = New System.Drawing.Point(10, 26)
+        Me.st_gb_ai.Location = New System.Drawing.Point(10, 118)
         Me.st_gb_ai.Name = "st_gb_ai"
         Me.st_gb_ai.Size = New System.Drawing.Size(180, 225)
         Me.st_gb_ai.TabIndex = 2
@@ -113,9 +150,9 @@ Partial Class stilcon
         Me.st_gb_ii.Controls.Add(Me.st_gb_ii_resolution_label)
         Me.st_gb_ii.Controls.Add(Me.st_gb_ii_name_label)
         Me.st_gb_ii.Controls.Add(Me.st_gb_ii_size_label)
-        Me.st_gb_ii.Location = New System.Drawing.Point(196, 26)
+        Me.st_gb_ii.Location = New System.Drawing.Point(196, 118)
         Me.st_gb_ii.Name = "st_gb_ii"
-        Me.st_gb_ii.Size = New System.Drawing.Size(450, 225)
+        Me.st_gb_ii.Size = New System.Drawing.Size(455, 225)
         Me.st_gb_ii.TabIndex = 1
         Me.st_gb_ii.TabStop = False
         Me.st_gb_ii.Text = "Informazioni icona"
@@ -229,8 +266,6 @@ Partial Class stilcon
         'st_ref_panel
         '
         Me.st_ref_panel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.st_ref_panel.Controls.Add(Me.st_ref_panel_link2)
-        Me.st_ref_panel.Controls.Add(Me.st_ref_panel_label2)
         Me.st_ref_panel.Controls.Add(Me.st_ref_icon_panel)
         Me.st_ref_panel.Controls.Add(Me.st_ref_panel_label1)
         Me.st_ref_panel.Controls.Add(Me.st_ref_panel_link1)
@@ -239,27 +274,6 @@ Partial Class stilcon
         Me.st_ref_panel.Name = "st_ref_panel"
         Me.st_ref_panel.Size = New System.Drawing.Size(682, 50)
         Me.st_ref_panel.TabIndex = 3
-        '
-        'st_ref_panel_link2
-        '
-        Me.st_ref_panel_link2.AutoSize = True
-        Me.st_ref_panel_link2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.st_ref_panel_link2.Location = New System.Drawing.Point(242, 14)
-        Me.st_ref_panel_link2.Name = "st_ref_panel_link2"
-        Me.st_ref_panel_link2.Size = New System.Drawing.Size(134, 23)
-        Me.st_ref_panel_link2.TabIndex = 4
-        Me.st_ref_panel_link2.TabStop = True
-        Me.st_ref_panel_link2.Text = "Codice sorgente"
-        '
-        'st_ref_panel_label2
-        '
-        Me.st_ref_panel_label2.AutoSize = True
-        Me.st_ref_panel_label2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.st_ref_panel_label2.Location = New System.Drawing.Point(219, 14)
-        Me.st_ref_panel_label2.Name = "st_ref_panel_label2"
-        Me.st_ref_panel_label2.Size = New System.Drawing.Size(17, 23)
-        Me.st_ref_panel_label2.TabIndex = 3
-        Me.st_ref_panel_label2.Text = "-"
         '
         'st_ref_icon_panel
         '
@@ -323,7 +337,7 @@ Partial Class stilcon
         Me.st_mn.Controls.Add(Me.st_mn_panel_chiudi)
         Me.st_mn.Controls.Add(Me.st_mn_panel_ruba)
         Me.st_mn.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.st_mn.Location = New System.Drawing.Point(0, 323)
+        Me.st_mn.Location = New System.Drawing.Point(0, 423)
         Me.st_mn.Name = "st_mn"
         Me.st_mn.Size = New System.Drawing.Size(682, 50)
         Me.st_mn.TabIndex = 5
@@ -333,19 +347,19 @@ Partial Class stilcon
         Me.AcceptButton = Me.st_mn_panel_apri
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(682, 373)
+        Me.ClientSize = New System.Drawing.Size(682, 473)
         Me.Controls.Add(Me.st_mn)
         Me.Controls.Add(Me.st_ref_panel)
         Me.Controls.Add(Me.st_gb)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(700, 420)
-        Me.MinimumSize = New System.Drawing.Size(700, 420)
         Me.Name = "stilcon"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Stilicon 1.1.0.2"
+        Me.Text = "Stilicon 1.2.0.0"
         Me.st_gb.ResumeLayout(False)
+        Me.st_gb_oz.ResumeLayout(False)
+        Me.st_gb_oz.PerformLayout()
         Me.st_gb_ai.ResumeLayout(False)
         Me.st_gb_ai.PerformLayout()
         CType(Me.st_gb_ai_tb, System.ComponentModel.ISupportInitialize).EndInit()
@@ -385,6 +399,8 @@ Partial Class stilcon
     Friend WithEvents st_ref_icon As PictureBox
     Friend WithEvents st_ref_icon_panel As Panel
     Friend WithEvents st_gb_ii_formato As Label
-    Friend WithEvents st_ref_panel_link2 As LinkLabel
-    Friend WithEvents st_ref_panel_label2 As Label
+    Friend WithEvents fbd As FolderBrowserDialog
+    Friend WithEvents st_gb_oz As GroupBox
+    Friend WithEvents st_gb_oz_fl As RadioButton
+    Friend WithEvents st_gb_oz_fw As RadioButton
 End Class
